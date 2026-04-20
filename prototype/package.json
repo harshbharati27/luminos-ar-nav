@@ -1,20 +1,21 @@
 {
-  "name": "prototype",
+  "name": "luminos-ar-nav",
   "private": true,
   "version": "0.0.0",
+  "main": "server.js",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
-    "start": "node index.js"
+    "preview": "vite preview",
+    "start": "node server.js"
   },
   "engines": {
     "node": "18.x"
   },
   "dependencies": {
-    "express": "^5.2.1",
+    "express": "^4.18.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5"
   },
