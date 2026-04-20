@@ -4,10 +4,12 @@ const path = require("path");
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-app.use(express.static(path.join(__dirname, "prototype")));
+// Serve built files
+app.use(express.static(path.join(__dirname, "dist")));
 
+// Handle SPA routing
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "prototype", "index.html"));
+    res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 
 app.listen(PORT, "0.0.0.0", () => {
